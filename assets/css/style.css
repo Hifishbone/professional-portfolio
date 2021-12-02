@@ -1,0 +1,294 @@
+:root {
+  --primary-color: #81c1c3;
+  --secondary-color: #344562;
+  --tertiary-color: #24272e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* UTILITIES */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex-row {
+  display: flex;
+}
+
+
+body {
+  color: var(--tertiary-color);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* HEADER / NAV BAR STYLES START */
+
+header {
+  padding: 20px 35px;
+  background-color: var(--tertiary-color);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+header h1 a {
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+  font-size: 36px;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  margin-left: -35px;
+  padding: auto;
+  padding-left: 60px;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+header nav {
+  margin: 7px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 10px;
+}
+
+header nav ul li a {
+  margin: 0.5vw;
+  padding: 10px 5px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+  border-bottom: 3px solid;
+}
+
+header nav ul li a:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-shadow: none;
+}
+
+/* HEADER / NAVBAR STYLES END */
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.section-content {
+    flex: 2 70%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-content img {
+  flex: 1;
+}
+
+.section-content p {
+  flex: 1;
+  flex-grow: 20;
+}
+
+.main {
+  flex-direction: column;
+  display: flex;
+  margin: 0;
+}
+
+#intro-section {
+  display: flex;
+  flex-direction: row;
+}
+
+#intro-section #intro-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+#work .section-info {
+  min-width: 200px;
+}
+
+.section-info table {
+  min-width: 100%;
+  border-collapse:separate;
+  border-spacing: 15px 15px;
+}
+
+.section-info a {
+  color: var(--secondary-color);
+  /* margin-bottom: 10px; */
+  min-width: 100%;
+}
+
+.hero {
+  border: solid;
+  border-color: var(--primary-color);;
+  width: 100%;
+  height: 10vw;
+  min-height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+#work .main-hero {
+  width: 100%;
+  height: 30vw;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  transition: .3s ease;
+  background-color: var(--primary-color);;
+}
+
+.hero:hover .overlay {
+  opacity: 0;
+}
+
+.hero-text {
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  padding: 5px;
+}
+
+.website-name {
+  font-size: 1.75vw;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.website-tech {
+  font-size: 1.3vw;
+}
+
+.links {
+  flex-direction: row;
+  display: flex;
+  gap: 30px
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  border-bottom: 3px solid;
+  margin: 0.1vw;
+  padding: 4px 0px;
+}
+
+/* WHAT YOU DO STYLES START */
+.section {
+  margin: 2rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  color: var(--secondary-color);
+  font-size: 60px;
+  padding-bottom: 3px;
+  flex: 0 0 16rem;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.section-info {
+  flex: 1 1 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding-left: 20px;
+  border-left: 0.3rem solid;
+}
+
+#about-me .section-info {
+  align-items: flex-start;
+}
+
+#about-me .section-img {
+  flex: 0 0 10rem;
+  margin-right: 20px;
+}
+
+#about-me .section-text {
+  flex: 1 1 0;
+}
+
+.section-img img {
+  max-width: 100%;
+}
+
+#contact-me .section-text {
+  display: flex;
+  flex: 0 0 100%;
+}
+
+.section-text p {
+  color: var(--tertiary-color);
+  font-size: 18px;
+}
+
+.section-text h4 {
+  font-size: 26px;
+  line-height: 1.5;
+  color: var(--secondary-color);
+}
+
+.section-text a {
+  min-width: fit-content;
+  font-size: 20px;
+  text-align: center;
+}
+
+.flex-box {
+  flex: 0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+/* WHAT YOU DO STYLES END */
